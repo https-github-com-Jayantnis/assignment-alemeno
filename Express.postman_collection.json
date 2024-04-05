@@ -1,0 +1,218 @@
+{
+	"info": {
+		"_postman_id": "2a212dc4-fdaa-4bf8-850e-e7faf0c852a8",
+		"name": "Express",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30303120",
+		"_collection_link": "https://lunar-shadow-68156.postman.co/workspace/Mustangs~38e4cd50-c6ba-4f01-851e-2463b2feb722/collection/31475305-2a212dc4-fdaa-4bf8-850e-e7faf0c852a8?action=share&source=collection_link&creator=30303120"
+	},
+	"item": [
+		{
+			"name": "register *",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"first_name\": \"sjayan\",\r\n  \"last_name\": \"nishad\",\r\n  \"age\": 30,\r\n  \"monthly_income\": 4e0000,\r\n  \"phone_number\": \"3333\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Check Eligibility *",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customer_id\": 15,\r\n    \"loan_amount\": 4000,\r\n    \"interest_rate\": 20,\r\n    \"tenure\": 19,\r\n    \"monthly_salary\": 30000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}check-eligibility",
+					"host": [
+						"{{URL}}check-eligibility"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Loans",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customer_id\": 295,\r\n    \"loan_amount\": 600000,\r\n    \"interest_rate\": 12.89,\r\n    \"tenure\": 16808\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}create-loan",
+					"host": [
+						"{{URL}}create-loan"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Approved Limit *",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customer_id\": 7879,\r\n    \"current_debt\": 751692\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}approve",
+					"host": [
+						"{{URL}}approve"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ALL customers *",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}customers",
+					"host": [
+						"{{URL}}customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ALL loans *",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}loans",
+					"host": [
+						"{{URL}}loans"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View-Loan *",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}view-loan/8321",
+					"host": [
+						"{{URL}}view-loan"
+					],
+					"path": [
+						"8321"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "make-payment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}make-payment/107/6719",
+					"host": [
+						"{{URL}}make-payment"
+					],
+					"path": [
+						"107",
+						"6719"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View-statement",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}view-statement/107/6719",
+					"host": [
+						"{{URL}}view-statement"
+					],
+					"path": [
+						"107",
+						"6719"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "URL",
+			"value": "http://localhost:3009/",
+			"type": "string"
+		}
+	]
+}
